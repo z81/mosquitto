@@ -7,7 +7,6 @@ ADD ./code /code
 ADD ./install.sh install.sh
 ADD make-auth /tmp/make-auth
 ADD bridge.conf /tmp/bridge.conf
-#RUN ./install.sh
-#ENTRYPOINT ["/bin/bash"]
-#HEALTHCHECK 
-#CMD ["restart-mqtt", "service mosquitto restart"]
+RUN ./install.sh
+ENTRYPOINT ["/bin/bash"]
+CMD ["mosquitto -c /etc/mosquitto/conf.d/bridge.conf"]

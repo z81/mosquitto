@@ -6,7 +6,7 @@ apt-get install -y software-properties-common
 add-apt-repository -y ppa:mosquitto-dev/mosquitto-ppa
 apt-get update
 apt-get -y upgrade
-apt-get install -y sqlite3 libsqlite3-dev gcc wget mosquitto libmosquitto-dev unzip make libssl-dev libmysqlclient-dev
+apt-get install -y gcc wget mosquitto libmosquitto-dev unzip make libssl-dev libmysqlclient-dev
 
 # mosquito && mosquitto-auth-plug
 wget https://codeload.github.com/jpmens/mosquitto-auth-plug/zip/0.0.8
@@ -31,4 +31,11 @@ cd /code/mosquitto-auth-plug-0.0.8
 make clean
 make
 
-# build mosquitto
+# install mysql
+debconf-set-selections <<< 'mysql-server mysql-server/root_password password fr'
+debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password fr'
+apt-get -y install mysql-server
+
+# create database
+mysql -pfr -e "CREATE DATABASE mosquitto"
+
