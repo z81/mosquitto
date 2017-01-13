@@ -1,1 +1,2 @@
-docker build -t zx81/fractal-broker .
+docker build -t zx81/fractal-broker-test .
+docker ps | grep 'zx81/fractal-broker-test'
