@@ -32,10 +32,11 @@ make clean
 make
 
 # install mysql
-debconf-set-selections <<< 'mysql-server mysql-server/root_password password fr'
-debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password fr'
-apt-get -y install mysql-server
+DEBIAN_FRONTEND=noninteractive && apt-get install -y mysql-server mysql-client
+service mysql start
 
 # create database
-mysql -pfr -e "CREATE DATABASE mosquitto"
+mysql -p$MYSQL_ROOT_PASSWORD < /install.sh
 
+# create test user
+#PBKDF2$sha256$901$ZoJWzNjQwgQOg6BM$e5PjMBr8kVK+kBe7HCoKg4rMPjn/LuP+ password 1
