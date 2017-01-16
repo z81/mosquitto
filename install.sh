@@ -36,7 +36,6 @@ DEBIAN_FRONTEND=noninteractive && apt-get install -y mysql-server mysql-client
 service mysql start
 
 # create database
-mysql -p$MYSQL_ROOT_PASSWORD < /install.sh
+mysql -p$MYSQL_ROOT_PASSWORD < ./mosquitto.sql
 
 # create test user
-#PBKDF2$sha256$901$ZoJWzNjQwgQOg6BM$e5PjMBr8kVK+kBe7HCoKg4rMPjn/LuP+ password 1

@@ -1,3 +1,6 @@
+CREATE DATABASE `mosquitto`;
+use `mosquitto`;
+
 DROP TABLE IF EXISTS users;
 
 CREATE TABLE users (
@@ -10,19 +13,19 @@ CREATE TABLE users (
 
 CREATE UNIQUE INDEX users_username ON users (username);
 
-INSERT INTO users (username, pw) VALUES ('jjolie', 'PBKDF2$sha256$901$pN94c3+KCcNvIV1v$LWEyzG6v/gtvTrjx551sNcWWfwIZKAg0');
-INSERT INTO users (username, pw) VALUES ('a', 'PBKDF2$sha256$901$XPkOwNbd05p5XsUn$1uPtR6hMKBedWE44nqdVg+2NPKvyGst8');
+INSERT INTO users (username, pw) VALUES ('jjolie', 'PBKDF2$sha256$901$TlNdK2MjiABs2zdM$jZjspGyWfcK3jus/N/WGZGdn5QeDftgm');
+INSERT INTO users (username, pw) VALUES ('a', 'PBKDF2$sha256$901$TlNdK2MjiABs2zdM$jZjspGyWfcK3jus/N/WGZGdn5QeDftgm');
 INSERT INTO users (username, pw, super)
 	VALUES ('su1',
-	'PBKDF2$sha256$901$chEZ4HcSmKtlV0kf$yRh2N62uq6cHoAB6FIrxIN2iihYqNIJp',
+	'PBKDF2$sha256$901$TlNdK2MjiABs2zdM$jZjspGyWfcK3jus/N/WGZGdn5QeDftgm',
 	1);
 INSERT INTO users (username, pw, super)
 	VALUES ('S1',
-	'PBKDF2$sha256$901$sdMgoJD3GaRlTF7y$D7Krjx14Wk745bH36KBzVwHwRQg0a+z6',
+	'PBKDF2$sha256$901$TlNdK2MjiABs2zdM$jZjspGyWfcK3jus/N/WGZGdn5QeDftgm',
 	1);
 INSERT INTO users (username, pw, super)
 	VALUES ('m1',
-	'PBKDF2$sha256$2$NLu+mJ3GwOpS7JLk$eITPuWG/+WMf6F3bhsT5YlYPY6MmJHvM',
+	'PBKDF2$sha256$901$TlNdK2MjiABs2zdM$jZjspGyWfcK3jus/N/WGZGdn5QeDftgm',
 	0);
 -- PSK
 INSERT INTO users (username, pw, super)

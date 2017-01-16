@@ -1,1 +1,1 @@
-docker exec -ti stoic_swirles env TERM=xterm bash -l
+docker exec -ti desperate_kare env TERM=xterm bash -l

@@ -1,0 +1,8 @@
+# user jjolie:
+m loc/rw lm
+l loc/rw lm
+m mega/secret false
+l mega/secret false
+m $SYS/broker false
+l $SYS/broker false
+
