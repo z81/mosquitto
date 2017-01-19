@@ -1,1 +1,1 @@
-docker exec -ti desperate_kare env TERM=xterm bash -l
+docker exec -ti pedantic_aryabhata env TERM=xterm bash -l

@@ -20,6 +20,18 @@ INSERT INTO users (username, pw, super)
 	'PBKDF2$sha256$901$TlNdK2MjiABs2zdM$jZjspGyWfcK3jus/N/WGZGdn5QeDftgm',
 	1);
 INSERT INTO users (username, pw, super)
+	VALUES ('su2',
+	'PBKDF2$sha256$901$TlNdK2MjiABs2zdM$jZjspGyWfcK3jus/N/WGZGdn5QeDftgm',
+	1);
+INSERT INTO users (username, pw, super)
+	VALUES ('su3',
+	'PBKDF2$sha256$901$TlNdK2MjiABs2zdM$jZjspGyWfcK3jus/N/WGZGdn5QeDftgm',
+	1);	
+INSERT INTO users (username, pw, super)
+	VALUES ('su4',
+	'PBKDF2$sha256$901$TlNdK2MjiABs2zdM$jZjspGyWfcK3jus/N/WGZGdn5QeDftgm',
+	1);		
+INSERT INTO users (username, pw, super)
 	VALUES ('S1',
 	'PBKDF2$sha256$901$TlNdK2MjiABs2zdM$jZjspGyWfcK3jus/N/WGZGdn5QeDftgm',
 	1);

@@ -13,4 +13,4 @@ ADD make-auth /tmp/make-auth
 ADD bridge.conf /tmp/bridge.conf
 ADD ./install.sh install.sh
 RUN ./install.sh
-ENTRYPOINT mosquitto -c /etc/mosquitto/conf.d/bridge.conf
+#ENTRYPOINT mosquitto -c /etc/mosquitto/conf.d/bridge.conf
